@@ -1,0 +1,5 @@
+Primary Green: #2d6a4f (growth, nature)
+Secondary Green: #4c956c (fresh leaves)
+Accent Orange: #e07a5f (fruit, harvest)
+Earth Brown: #8c6d46 (soil, roots)
+Dark Green: #1b4332 (professional)
