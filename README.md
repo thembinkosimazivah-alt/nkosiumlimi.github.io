@@ -1,2 +1,488 @@
-# nkosiumlimi.github.io
-Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Grafted Fruit Trees | [Your Business Name]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d6a4f;
+            --secondary: #4c956c;
+            --accent: #e07a5f;
+            --dark: #1b4332;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fb;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            border-color: #25D366;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.3rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--dark);
+        }
+
+        .logo-icon {
+            margin-right: 8px;
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after,
+        .nav-links a.active:after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.9)), url('https://images.unsplash.com/photo-1593692908401-382c7f82c8e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+        .trees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tree-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .tree-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .tree-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .tree-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .tree-card:hover .tree-img img {
+            transform: scale(1.1);
+        }
+
+        .tree-content {
+            padding: 25px;
+        }
+
+        .tree-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .tree-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .tree-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tree-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 15px 0;
+            display: block;
+        }
+
+        .tree-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .tree-features li {
+            padding: 5px 0;
+            color: var(--gray);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tree-features li:before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+            
+            .trees-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-tree logo-icon"></i>
+                    <span>Green</span>Graft
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#trees">Our Trees</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Grafted Fruit Trees for Zimbabwean Farmers</h1>
+                <p>High-yield, disease-resistant grafted fruit trees grown with expert care. Get fruit in 2-3 years instead of 7-10!</p>
+                <a href="#trees" class="btn">View Our Trees</a>
+                <a href="https://wa.me/263YOURNUMBER" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Order
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trees Section -->
+    <section id="trees" style="background: white; padding-top: 60px;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Grafted Fruit Trees</h2>
+                <p>Expertly grafted for faster fruiting and higher yields</p>
+            </div>
+            <div class="trees-grid">
+                <!-- Tree 1 -->
+                <div class="tree-card">
+                    <div class="tree-img">
+                        <img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Grafted Mango Tree">
+                    </div>
+                    <div class="tree-content">
+                        <h3>Grafted Mango Tree</h3>
+                        <div class="tree-meta">
+                            <span><i class="fas fa-seedling"></i> 1 Year Old</span>
+                            <span><i class="fas fa-ruler-vertical"></i> 1.2m Height</span>
+                        </div>
+                        <ul class="tree-features">
+                            <li>Tommy Atkins variety</li>
+                            <li>Disease-resistant rootstock</li>
+                            <li>Fruits in 2-3 years</li>
+                            <li>High yield potential</li>
+                        </ul>
+                        <span class="tree-price">$8 per tree | $70 per 10</span>
+                        <a href="https://wa.me/263YOURNUMBER" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tree 2 -->
+                <div class="tree-card">
+                    <div class="tree-img">
+                        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Grafted Avocado Tree">
+                    </div>
+                    <div class="tree-content">
+                        <h3>Grafted Avocado Tree</h3>
+                        <div class="tree-meta">
+                            <span><i class="fas fa-seedling"></i> 1 Year Old</span>
+                            <span><i class="fas fa-ruler-vertical"></i> 1m Height</span>
+                        </div>
+                        <ul class="tree-features">
+                            <li>Hass variety</li>
+                            <li>Drought-tolerant rootstock</li>
+                            <li>Fruits in 2-3 years</li>
+                            <li>Year-round production</li>
+                        </ul>
+                        <span class="tree-price">$10 per tree | $90 per 10</span>
+                        <a href="https://wa.me/263YOURNUMBER" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tree 3 -->
+                <div class="tree-card">
+                    <div class="tree-img">
+                        <img src="https://images.unsplash.com/photo-1599542638225-22c8cf39b4b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Grafted Citrus Tree">
+                    </div>
+                    <div class="tree-content">
+                        <h3>Grafted Orange Tree</h3>
+                        <div class="tree-meta">
+                            <span><i class="fas fa-seedling"></i> 1 Year Old</span>
+                            <span><i class="fas fa-ruler-vertical"></i> 0.8m Height</span>
+                        </div>
+                        <ul class="tree-features">
+                            <li>Valencia variety</li>
+                            <li>Citrus tristeza resistant</li>
+                            <li>Fruits in 2 years</li>
+                            <li>Sweet, juicy fruit</li>
+                        </ul>
+                        <span class="tree-price">$7 per tree | $60 per 10</span>
+                        <a href="https://wa.me/263YOURNUMBER" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/263YOURNUMBER" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (!anchor.href.includes('wa.me')) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
